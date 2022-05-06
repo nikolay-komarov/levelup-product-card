@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { ProductCard } from "./product-card";
+import { ProductCard } from "/src/product-card/product-card";
 
 import { product } from "./mock";
 
