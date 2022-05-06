@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "/src/button/button";
 
 export const Comments = ({ comments }) => {
   return (
@@ -13,6 +14,7 @@ export const Comments = ({ comments }) => {
             </li>
           ))}
       </ul>
+      <Button>Показать еще</Button>
     </div>
   );
 };

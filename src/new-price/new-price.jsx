@@ -1,5 +1,6 @@
 import React from "react";
+import { StyledNewPrice } from "./styled";
 
 export const NewPrice = ({ value }) => {
-  return <b>{value} ₽</b>;
+  return <StyledNewPrice>{value} ₽</StyledNewPrice>;
 };

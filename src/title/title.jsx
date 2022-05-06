@@ -1,5 +1,7 @@
-import React from "react";
+import styled from "styled-components";
 
-export const Title = ({ children }) => {
-  return <h1>{children}</h1>;
-};
+export const Title = styled.h1`
+  padding: 0;
+  margin: 0;
+  font-size: ${(props) => (props.small ? 20 : 34)}px;
+`;

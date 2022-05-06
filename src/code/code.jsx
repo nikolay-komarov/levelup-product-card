@@ -1,5 +1,6 @@
 import React from "react";
+import { StyledCode } from "./styled";
 
 export const Code = ({ children }) => {
-  return <small>Артикул: {children}</small>;
+  return <StyledCode>Артикул: {children}</StyledCode>;
 };
