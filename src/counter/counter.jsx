@@ -2,9 +2,9 @@ import React from "react";
 import { StyledCounter, StyledValue } from "./styled";
 import { Button } from "/src/button/button";
 
-export const Counter = () => {
+export const Counter = ({ className }) => {
   return (
-    <StyledCounter>
+    <StyledCounter className={className}>
       <Button size="small">-</Button>
       <StyledValue>1</StyledValue>
       <Button size="small">+</Button>
