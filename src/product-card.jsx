@@ -6,6 +6,8 @@ import { OldPrice } from "./old-price";
 import { NewPrice } from "./new-price";
 import { Counter } from "./counter";
 import { Description } from "./description";
+import { Comments } from "./comments";
+import { Popularity } from "./popularity";
 
 export const ProductCard = ({ product }) => {
   return (
@@ -24,9 +26,11 @@ export const ProductCard = ({ product }) => {
           </div>
           <p>Доставка: {product.delivery}</p>
           <button>Купить</button>
+          <Popularity count={product.comments.length} />
         </div>
       </div>
       <Description text={product.description} />
+      <Comments comments={product.comments} />
     </section>
   );
 };
