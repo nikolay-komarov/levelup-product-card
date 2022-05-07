@@ -5,6 +5,7 @@ import { Gallary } from "/src/gallary/gallary";
 import { Description } from "/src/description/description";
 import { Comments } from "/src/comments/comments";
 import { Popularity } from "/src/popularity/popularity";
+import { Tabs } from "/src/tabs/tabs";
 import {
   BuyButton,
   DeliveryValue,
@@ -18,6 +19,17 @@ import {
 } from "./styled";
 
 export const ProductCard = ({ product }) => {
+  const tabs = [
+    {
+      title: "Описание",
+      content: <Description text={product.description} />
+    },
+    {
+      title: "Комментарии",
+      content: <Comments comments={product.comments} />
+    }
+  ];
+
   return (
     <StyledProductCard>
       <Header>
@@ -45,8 +57,7 @@ export const ProductCard = ({ product }) => {
           <Popularity count={product.comments.length} />
         </ProductInfo>
       </ProductWrapper>
-      <Description text={product.description} />
-      <Comments comments={product.comments} />
+      <Tabs tabs={tabs} />
     </StyledProductCard>
   );
 };

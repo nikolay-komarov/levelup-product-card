@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "/src/button/button";
+import { CommentsWrapper, CommentsList } from "./styled";
 
 export const Comments = ({ comments }) => {
   return (
-    <div>
-      <h2>Комментарии</h2>
-      <ul>
+    <CommentsWrapper>
+      <CommentsList>
         {comments &&
           comments.map((item) => (
             <li key={item.id}>
@@ -13,8 +13,8 @@ export const Comments = ({ comments }) => {
               <p>{item.text}</p>
             </li>
           ))}
-      </ul>
+      </CommentsList>
       <Button>Показать еще</Button>
-    </div>
+    </CommentsWrapper>
   );
 };

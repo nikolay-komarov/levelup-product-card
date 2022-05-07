@@ -1,12 +1,12 @@
 import React from "react";
 import { Button } from "/src/button/button";
+import { DescriptionText } from "./styled";
 
 export const Description = ({ text }) => {
   return (
-    <div>
-      <h2>Описание</h2>
-      <p>{text}</p>
+    <>
+      <DescriptionText>{text}</DescriptionText>
       <Button>Подробнее</Button>
-    </div>
+    </>
   );
 };
