@@ -1,6 +1,9 @@
-import React from "react";
-import { StyledNewPrice } from "./styled";
+import styled from "styled-components";
 
-export const NewPrice = ({ value, className }) => {
-  return <StyledNewPrice className={className}>{value} ₽</StyledNewPrice>;
-};
+export const NewPrice = styled.span.attrs((props) => ({
+  children: `${props.value} ₽`
+}))`
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+`;

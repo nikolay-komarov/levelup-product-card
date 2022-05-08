@@ -1,6 +1,8 @@
-import React from "react";
-import { StyledCode } from "./styled";
+import styled from "styled-components";
 
-export const Code = ({ children }) => {
-  return <StyledCode>Артикул: {children}</StyledCode>;
-};
+export const Code = styled.span.attrs((props) => ({
+  children: `Артикул: ${props.children}`
+}))`
+  color: #888;
+  font-size: 12px;
+`;

@@ -1,6 +1,9 @@
-import React from "react";
-import { StyledOldPrice } from "./styled";
+import styled from "styled-components";
 
-export const OldPrice = ({ value }) => {
-  return <StyledOldPrice>{value} ₽</StyledOldPrice>;
-};
+export const OldPrice = styled.del.attrs((props) => ({
+  children: `{value} ₽`
+}))`
+  font-size: 18px;
+  color: #888;
+  line-height: 1;
+`;
