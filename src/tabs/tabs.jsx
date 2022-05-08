@@ -11,7 +11,7 @@ export const Tabs = ({ tabs, activeTab = 0 }) => {
             if (idx === activeTab) {
               return (
                 <TitleButton active key={tab.title}>
-                  <TitleText small active>
+                  <TitleText small active as="h2">
                     {tab.title}
                   </TitleText>
                 </TitleButton>
@@ -19,7 +19,9 @@ export const Tabs = ({ tabs, activeTab = 0 }) => {
             } else {
               return (
                 <TitleButton key={tab.title}>
-                  <TitleText small>{tab.title}</TitleText>
+                  <TitleText small as="h2">
+                    {tab.title}
+                  </TitleText>
                 </TitleButton>
               );
             }
