@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const OldPrice = styled.del.attrs((props) => ({
-  children: `{value} ₽`
+  children: `${props.value} ₽`
 }))`
   font-size: 18px;
   color: #888;

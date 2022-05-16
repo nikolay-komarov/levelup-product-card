@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Title } from "/src/title/title";
 import { Code } from "/src/code/code";
 import { Gallary } from "/src/gallary/gallary";
@@ -19,6 +19,10 @@ import {
 } from "./styled";
 
 export const ProductCard = ({ product }) => {
+  const [productCount, setProductCount] = useState(1);
+  const price = product.price * productCount;
+  const oldPrice = product.oldPrice * productCount;
+
   const tabs = [
     {
       title: "Описание",
@@ -40,14 +44,15 @@ export const ProductCard = ({ product }) => {
         <Gallary src={product.src} alt={product.alt} />
         <ProductInfo>
           <ProductInfoLine>
-            Цена:{" "}
-            <PageFullPrice
-              oldPrice={product.oldPrice}
-              newPrice={product.price}
-            />
+            Цена: <PageFullPrice oldPrice={oldPrice} newPrice={price} />
           </ProductInfoLine>
           <ProductInfoLine>
-            Количестово: <PageCounter />
+            Количестово:{" "}
+            <PageCounter
+              value={productCount}
+              minValue={1}
+              onChange={setProductCount}
+            />
           </ProductInfoLine>
           <ProductInfoLine>
             <span>Доставка: </span>
